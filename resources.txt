@@ -1,0 +1,18 @@
+*** Settings ***
+
+Library         Selenium2Library    15
+
+*** Variables ***
+
+${SERVER}        eficode.fi
+${BROWSER}       phantomjs
+${HOMEPAGE}      http://${SERVER}
+
+*** Keywords ***
+
+Open browser and go to homepage
+  Open Browser       ${HOMEPAGE}    ${BROWSER}
+  Set Window Size    1200  900
+
+Click link in header  [Arguments]  ${text}
+  Click Link         //a[contains(h1|h2|h3,'${text}')]

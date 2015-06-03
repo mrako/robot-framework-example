@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+report.html
+log.html
+output.xml
+selenium-*.png
